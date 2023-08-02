@@ -1,0 +1,332 @@
+
+@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+*{
+    font-weight: 600;
+    font-family: 'Barlow Semi Condensed';
+}
+body{
+    background:radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%) )  ;
+}
+h1,h2,h3{
+    font-weight: 700;
+}
+.contain{
+    width: 80vw;
+    height: 100vh;
+    margin-left: 3%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.scorebox{
+    padding: 2em;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: white;
+}
+.scorebox>p{
+    color:  hsl(229, 64%, 46%);
+}
+.scorebox>h1{
+    color:  hsl(229, 25%, 31%);
+}
+.bgtriangle{
+    background-image: url(" bg-triangle.svg");
+    background-repeat: no-repeat;
+    width: 30rem;
+    background-size: 30rem;
+    height: 30rem;
+    margin-top:15%;
+    position: relative;
+    filter:red brightness(0.2) sepia(50) hue-rotate(210deg);
+    
+}
+.titlebox{
+    max-width: 40rem;
+    width: 75%;
+    min-width: 250px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 10px solid hsl(217, 16%, 45%);;
+    border-radius: 20px;
+}
+.titlebox>img{
+    width: 13rem;
+    height: 7rem;
+}
+.rock,.paper,.scissor{
+    display: flex;
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    justify-content: center;
+    align-items: center;
+   /* background-color: red;
+   */ border-radius: 50%;
+    background-color: white;
+    border:2rem solid blue;
+}
+img{
+    width: 7rem;
+    height: 7rem;
+}
+.paper{
+    top: -6rem;
+    right: 18rem;
+    border-color: hsl(230, 89%, 62%);
+}
+.scissor{
+    left: 16rem;
+    top: -6rem;
+    border-color: hsl(39, 89%, 49%)
+}
+.rock{
+    top: 14rem;
+    left: 6rem;
+    border-color: hsl(349, 71%, 52%);
+
+}
+.btn{
+    display: flex;
+    margin-left: 85%;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 4rem;
+    font-size: 25px;
+    position: relative;
+    color: white;
+    border: 5px solid white;
+    background-color: inherit;
+}
+button{
+    color: rgb(109, 109, 202);
+    /*  border: 2px solid white;
+    */  background-color: white;
+    border-radius: 15px;
+}
+.modal{
+    display: none;
+    position: fixed;
+    top: 30%;
+    place-content: center;
+    width: 25rem;
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content{
+    display: flex;
+    width: 100%;
+    height: 26rem;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 15px;
+    padding: 3%;
+}
+#rules{
+    width: 20rem;
+    height: 20rem;
+    color: white;
+    border: 1% solid white;
+
+}
+#close{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+.step2{
+    display: none;
+  /*  display: flex;
+    */justify-content: space-evenly;
+    flex-direction: column;
+ /*   border: 2px solid snow;
+  */  height: 60vh;
+    width: 100%;
+    min-width: 300px;
+    max-width: 900px;
+
+}
+.hd{
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+.pick{
+    width: 95%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-between;
+}
+.pick1, .pick2{
+    margin: 3%;
+    background-repeat: no-repeat;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100px 100px;
+
+}
+.pick1{
+background-image: url(' icon-paper.svg');
+background-repeat: no-repeat;
+/*border: 2rem solid yellow;
+*/background-color: white;
+
+}
+.pick2{
+background-repeat: no-repeat;
+background-color: rgb(1, 1, 59);
+}
+.result{
+    display: none;
+    position: relative;
+    flex-direction: column;
+}
+#h1{
+color: white;
+font-size: 40px;
+}
+#play{
+color: hsl(229, 25%, 31%);
+/*  border: 2px solid white;
+ */  background-color: white;  
+padding: 5%;
+font-size: 25px;
+}
+@media (min-width: 400px) and (max-width: 650px) {
+    .pick1, .pick2 {
+   /*   border: 1rem solid;
+    */  width: 10rem;
+      height: 7rem;
+      background-size: 3.5rem 3.5rem;
+    }
+    .paper, .scissor, .rock{
+        width: 8rem;
+        height: 8rem;
+    }
+    .tri>img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .bgtriangle{
+        width: 15rem;
+        background-size: 15rem;
+        height: 15rem;
+    }
+    .scissor {
+        left: 9rem;
+        top: -5rem;
+    }
+    .paper {
+        top: -5rem;
+        right: 9rem;
+    }
+    .rock {
+        top: 8rem;
+        left: 2rem;
+    }
+    
+.titlebox>img{
+    width: 7rem;
+}
+}
+@media (max-width:400px){
+    .modal{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+    }
+    .modal-content{
+        height: 100%;
+        width: 100%;
+    }
+    #rules{
+        width: 15rem;
+        height: 15rem;
+    }
+    #close{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .pick1, .pick2 {
+       /* border: 1rem solid;
+        */width: 5rem;
+        height: 5rem;
+        top: -20%;
+        position: relative;
+        background-size: 3rem 3rem;
+      }
+      .pick{
+        flex-wrap: wrap;
+      }
+      .hd{
+        top: 50%;
+        left: 10%;
+        position: relative;
+      }
+      .result{
+        order: 3;
+        top: 16%;
+        left: 10%;
+      }
+      .btn{
+        margin-left: 0;
+      }
+      .paper, .scissor, .rock{
+          width: 5rem;
+          height: 5rem;
+          border:1rem solid blue;
+      }
+      .tri>img{
+          width: 3rem;
+          height: 3rem;
+      }
+      .bgtriangle{
+          width: 10rem;
+          background-size: 10rem;
+          height: 10rem;
+      }
+    .scissor {
+        left: 7rem;
+        top: -4rem;
+        border-color: hsl(39, 89%, 49%)
+
+    }
+      .paper {
+        top: -4rem;
+        right: 6.5rem;
+        border-color:hsl(230, 89%, 62%);
+    }
+      .rock {
+          top: 5rem;
+          left: 1rem;
+          border-color: hsl(349, 71%, 52%);
+      }
+      .scorebox{
+        padding: 1em;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .titlebox>img{
+        width: 5rem;
+        height: 5rem;
+        padding-left: 20px;
+      }
+}
+

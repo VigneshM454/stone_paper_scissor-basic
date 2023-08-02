@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href=" favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="index.css">
+  <!--Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again
+ -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <div class="titlebox">
+      <img src="logo.svg"id="logo" alt="logo">
+      <div class="scorebox">
+        <p>SCORE</p>
+        <h1 id="score" value="10">10</h1>
+      </div>
+    </div>
+    <div class="step2">
+      <div class="hd">
+        <h2>YOU PICKED</h2>
+        <h2>THE HOUSE PICKED</h2>
+      </div>
+      <div class="pick">
+       <div class="pick1"></div>
+       <div class="result">
+        <h1 id="h1"></h1>
+        <button id="play" onclick="playagain()">PLAY AGAIN</button>
+       </div>
+       <div class="pick2"></div> 
+      </div>
+    </div>
+  
+    <div class="bgtriangle">
+      <div  class="tri paper" id="paper">
+        <img alt="paper" src=" icon-paper.svg" >
+      </div>
+      <div  class="tri scissor" id="scissor">
+        <img alt="scissor" src=" icon-scissors.svg" >
+      </div>
+      <div  class="tri rock" id="rock">
+        <img alt="rock" src=" icon-rock.svg" >
+      </div>
+    </div>
+    <button class="btn" onclick="show()">RULES</button>
+    <div id="mymodal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h1>RULES</h1>
+        <img src=" image-rules.svg" id="rules" alt="rules">
+        <img src=" icon-close.svg" id="close" alt="close the rules">
+      </div>
+    </div>
+  </div>
+  
+<!---
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  --->
+  <script src="index.js"></script>
+</body>
+</html>
